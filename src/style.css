@@ -155,7 +155,7 @@ body {
 
 .product-components .product-components-block .product-components-content {
   height: 1080px;
-  background-image: url(/src/img/prod.png);
+  background-image: url("../src/img/prod.png");
   background-repeat: no-repeat;
   background-position: center;
   margin: 0 auto;
