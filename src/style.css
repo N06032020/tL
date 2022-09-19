@@ -1,4 +1,4 @@
-@import url(src/media.css);
+@import "media.css";
 
 * {
   margin: 0;
