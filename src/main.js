@@ -13,15 +13,20 @@ $(document).ready(function () {
 });
 
 // Timer
-const counterElement = document.querySelector('.counter');
-let counter = 30;
-let timerID;
+let time = 1800;
+const countDownElement = document.querySelector("#countdown");
 
-timerID = setInterval(function () {
-  counter--;
-  counterElement.innerText = counter;
+setInterval(updateCountdown, 1000);
 
-  if (counter < 1) {
-    clearInterval(timerID);
-  }
-}, 1000);
+function updateCountdown() {
+  const minutes = Math.floor(time / 60);
+
+  let seconds = time % 60;
+
+  seconds = seconds < 10 ? "0" + seconds : seconds;
+
+  countDownElement.innerHTML = `${minutes}:${seconds}`;
+
+  time--;
+}
+
